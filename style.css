@@ -1,0 +1,27 @@
+body {
+    margin: 10px 50px 0px 50px;
+    font-family: 'Helvetica';
+}
+table {
+	width: 700px;
+	margin-left: 60px;
+	margin-top: 25px;
+	}
+table,th,td {
+	border:1px solid darkgray;
+	padding: 5px;
+	}
+th {
+	background-color: gray;
+	color: white; 
+	line-height: 10px;
+	font-weight: normal;
+}
+tr:nth-child(odd) {
+	background-color: lightgray;
+}
+hr {
+	width: 700px;
+	float: left;
+	margin-right: 531px;
+}

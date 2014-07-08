@@ -1,13 +1,117 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Task Manager</title>
-	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Task Manager</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="app.js"></script>
+<div class="container">
+	<div class="header"><h3>Task Manager</h3></div>
+	<hr>
+	<!-- Modals' buttons -->
+	<a href="#" class="btn btn-sm btn-success" id="modal"
+   data-toggle="modal"
+   data-target="#addTaskModal">Add new task</a>
+
+   <a href="#" class="btn btn-sm btn-success" id="modal"
+   data-toggle="modal"
+   data-target="#settingsModal">Settings</a>
+
+	<!-- Modals -->
+	<div class="modal fade" id="addTaskModal" tabindex="-1" role="dialog" aria-labelledby="addTaskModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Add a new task:</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+            <fieldset>
+                <p>
+                    <label for="id">Title</label><br/>
+                    <input type="text" name="id" id="productId" placeholder="">
+                </p>
+                <p>
+                    <label for="name">Deadline</label><br/>
+                    <input type="text" name="name" id="name" value="" placeholder="">
+                </p>
+                <p>
+                    <label for="password">Description</label><br/>
+                    <input type="text" name="price" id="price" value="" placeholder="$">
+                </p>
+                <p>
+                    <label for="password">Starred</label><br/>
+                    <input type="text" name="price" id="price" value="">
+                </p>
+            </fieldset>
+        </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-primary">Save Task</button>
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+        	</div>
+    	</div>
+  	</div>
+	</div>
+
+	<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModal" aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	            <h4 class="modal-title" id="myModalLabel">Settings:</h4>
+	            </div>
+	            <div class="modal-body">
+	                <h3>Modal Body</h3>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-primary">Save Task</button>
+	                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        	</div>
+	    	</div>
+	  	</div>
+	</div>
+</div>	
+
+<table >
+<tbody><tr>
+		<th>Task</th>
+		<th>Date</th>		
+		<th>Started</th>
+		<th>Options</th>
+	</tr>
+	<td>dsf</td>
+	<td>fsdf</td>
+	<td>fsdf</td>
+	<td>fsdf</td>
+	</tr>
+	<td>dsf</td>
+	<td>fsdf</td>
+	<td>fsdf</td>
+	<td>fsdf</td>
+	<tr>
+		
+	</tr>
+	
+</tbody>
+</table>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  "use strict";
+
+	var options = {
+    "backdrop" : "static",
+    "keyboard" : "true"
+	};
+	$('#addTaskModal').modal(options);
+	$('#settingsModal').modal(options);};
+});
+</script>
 </body>
+
 </html>
